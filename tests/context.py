@@ -11,4 +11,4 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # has to be imported _after_ the functional code
-import dicom_circle_finder.dicom_processing_utils
+import dicom_circle_finder.dicom_processing_utils # pylint: disable=unused-import, wrong-import-position

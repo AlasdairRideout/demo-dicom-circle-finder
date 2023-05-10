@@ -5,7 +5,7 @@ Primary execution path
 
 import sys
 
-from .core import main
+from dicom_circle_finder.core import main
 
 
 if __name__ == "__main__":

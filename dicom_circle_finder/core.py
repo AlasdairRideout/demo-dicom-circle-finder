@@ -5,7 +5,7 @@ Core functions for the package
 
 import argparse
 
-from .dicom_processing_utils import DICOMHandler
+from dicom_circle_finder.dicom_processing_utils import DICOMHandler
 
 
 def get_parser():

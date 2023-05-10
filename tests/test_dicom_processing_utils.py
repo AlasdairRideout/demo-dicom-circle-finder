@@ -1,3 +1,5 @@
+# pylint: disable=too-few-public-methods
+
 """
 Tests for the file dicom_processing_utils.py
 
