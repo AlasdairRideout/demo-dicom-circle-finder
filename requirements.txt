@@ -1,0 +1,6 @@
+build
+matplotlib
+numpy
+opencv-python
+pydicom
+pytest
