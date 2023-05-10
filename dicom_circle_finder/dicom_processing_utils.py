@@ -16,13 +16,13 @@ def find_circles_in_image(filename):
     """
     Uses the Hough Circle Transform to find circles in a given image
     """
-    source_image = cv.imread(cv.samples.findFile(filename), cv.IMREAD_COLOR)
-    grayscale_image = cv.cvtColor(source_image, cv.COLOR_BGR2GRAY)
-    grayscale_image = cv.medianBlur(grayscale_image, 5)
+    source_image = cv.imread(cv.samples.findFile(filename), cv.IMREAD_COLOR) # pylint: disable=no-member
+    grayscale_image = cv.cvtColor(source_image, cv.COLOR_BGR2GRAY) # pylint: disable=no-member
+    grayscale_image = cv.medianBlur(grayscale_image, 5) # pylint: disable=no-member
     rows = grayscale_image.shape[0]
-    circles = cv.HoughCircles(
+    circles = cv.HoughCircles( # pylint: disable=no-member
         grayscale_image,
-        cv.HOUGH_GRADIENT,
+        cv.HOUGH_GRADIENT, # pylint: disable=no-member
         1,
         rows/16,
         param1=100,
@@ -59,7 +59,7 @@ class DICOMHandler():
         """
         if self.dataset.pixel_array.any():
             # convert array to matplot image amd save as png
-            pyplot.imshow(self.dataset.pixel_array, cmap=pyplot.cm.bone)
+            pyplot.imshow(self.dataset.pixel_array, cmap=pyplot.cm.bone) # pylint: disable=no-member
             pyplot.axis('off')
             pyplot.savefig(filename, format='png', bbox_inches='tight', pad_inches=0)
 
